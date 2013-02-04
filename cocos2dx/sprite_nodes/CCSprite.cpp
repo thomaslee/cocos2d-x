@@ -564,7 +564,7 @@ void CCSprite::draw(void)
     ccGLEnableVertexAttribs( kCCVertexAttribFlag_PosColorTex );
 
 #define kQuadSize sizeof(m_sQuad.bl)
-    long offset = (long)&m_sQuad;
+    char* offset = (char*)&m_sQuad;
 
     // vertex
     int diff = offsetof( ccV3F_C4B_T2F, vertices);
